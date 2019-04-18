@@ -1,0 +1,18 @@
+.admin {
+  display: grid;
+  grid-template-rows: [r1] minmax(0, auto) [r2] auto [r3];
+  grid-template-columns: [c1] 1fr [c2] 1fr [c3];
+  grid-template-areas:
+  "users roles"
+  "users edits";
+
+  &__users {
+    grid-area: users;
+  }
+  &__roles {
+    grid-area: roles;
+  }
+  &__edits {
+    grid-area: edits;
+  }
+}

@@ -1,0 +1,38 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+input {
+  border: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background-color: inherit;
+  outline: 0;
+
+  &:focus {
+      outline: 0;
+  }
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  outline: 0;
+}
+
+address {
+  margin-bottom: 0;
+}
+
+label {
+  margin-bottom: 0;
+}

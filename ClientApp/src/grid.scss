@@ -1,0 +1,86 @@
+$width: 100%;
+
+$col-mobile: $width / 4;
+$col-tablet: $width / 8;
+$col-desktop: $width / 12;
+
+@include respond-to(mobile) {
+  .col-mobile-1 {
+    width: $col-mobile;
+  }
+  .col-mobile-2 {
+    width: $col-mobile * 2;
+  }
+  .col-mobile-3 {
+    width: $col-mobile * 3;
+  }
+  .col-mobile-4 {
+    width: $col-mobile * 4;
+  }
+}
+
+@include respond-to(tablet) {
+  .col-tablet-1 {
+    width: $col-tablet;
+  }
+  .col-tablet-2 {
+    width: $col-tablet * 2;
+  }
+  .col-tablet-3 {
+    width: $col-tablet * 3;
+  }
+  .col-tablet-4 {
+    width: $col-tablet * 4;
+  }
+  .col-tablet-5 {
+    width: $col-tablet * 5;
+  }
+  .col-tablet-6 {
+    width: $col-tablet * 6;
+  }
+  .col-tablet-7 {
+    width: $col-tablet * 7;
+  }
+  .col-tablet-8 {
+    width: $col-tablet * 8;
+  }
+}
+
+@include respond-to(desktop) {
+  .col-desktop-1 {
+    width: $col-desktop;
+  }
+  .col-desktop-2 {
+    width: $col-desktop * 2;
+  }
+  .col-desktop-3 {
+    width: $col-desktop * 3;
+  }
+  .col-desktop-4 {
+    width: $col-desktop * 4;
+  }
+  .col-desktop-5 {
+    width: $col-desktop * 5;
+  }
+  .col-desktop-6 {
+    width: $col-desktop * 6;
+  }
+  .col-desktop-7 {
+    width: $col-desktop * 7;
+  }
+  .col-desktop-8 {
+    width: $col-desktop * 8;
+  }
+  .col-desktop-9 {
+    width: $col-desktop * 9;
+  }
+  .col-desktop-10 {
+    width: $col-desktop * 10;
+  }
+  .col-desktop-11 {
+    width: $col-desktop * 11;
+  }
+  .col-desktop-12 {
+    width: $col-desktop * 12;
+  }
+}

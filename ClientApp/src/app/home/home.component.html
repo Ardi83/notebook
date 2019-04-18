@@ -1,0 +1,47 @@
+<nav class="nav">
+  <button class="nav__toggle" [innerHTML]="menu" (click)="menuToggle()"></button>
+  <ul class="nav__list" [class.nav__list--active]="mobileMenu">
+    <li class="nav__list_item" [routerLink]="['']" routerLinkActive="router-link-active" (click)="menuToggle()"><a>Home</a></li>
+    <li class="nav__list_item" [routerLink]="['notes']" routerLinkActive="router-link-active" (click)="menuToggle()"><a>Notes</a></li>
+    <li class="nav__list_item" [routerLink]="['notes']" routerLinkActive="router-link-active" (click)="menuToggle()"><a>Info</a></li>
+    <li class="nav__list_item" [routerLink]="['admin']" routerLinkActive="router-link-active" (click)="menuToggle()"><a>Admin</a></li>
+  </ul>
+</nav>
+
+<div class="home">
+    <div class="home__header">
+    </div>
+    <div class="home__content">
+        <div class="home__content_box">
+            <div class="home__content_box_text-left col-desktop-4 col-mobile-4">
+                <h2>Welcome to Personal Notebook</h2>
+                <h4>Personal Notebook is your personal digital notebook. Create content, organize your work, and collaborate with others.</h4>
+                <div class="home__content_form">
+                  <app-register class="home__content_form_register" [@changeForm]="!showLogin ? 'show' : 'hide'"></app-register>
+                  <app-login class="home__content_form_login" [@changeForm]="showLogin ? 'show' : 'hide'"></app-login>
+                  <app-spinner></app-spinner>
+                  <button class="home__content_form_button" (click)="toggleForm()">{{ toggleName }}</button>
+                </div>
+            </div>
+            <div class="home__content_box_text-right col-desktop-8 col-mobile-4">
+                <p>After checking an elderly couple out, the doctor tells them that they were physically okay but might want to start writing things down and make notes to help them remember things, as their memory is getting worse. The couple thanked the doctor and left.
+
+                    A few days later,  while watching TV, the old man got up from his chair and his wife asks, "Where are you going?"
+
+                    He replies, "To the kitchen."
+
+                    She asks, "Will you get me a bowl of ice cream?"
+
+                    He replies, "Sure."
+
+                    She then asks him, "Don't you think you should write it down so you can remember it?"
+
+                    He says, <em>"No, I can remember that."</em>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<app-create-note></app-create-note>

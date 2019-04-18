@@ -1,0 +1,141 @@
+@import '../../styles.scss';
+
+.home {
+
+  &__header {
+    height: 500px;
+    background-image: url("../../assets/homeBg.png");
+    background-position: center;
+  }
+
+  &__content {
+    padding-top: $spacing-large;
+
+    &_box {
+      display: flex;
+      flex-direction: column;
+
+      @include respond-to(desktop) {
+        flex-direction: row;
+
+        &_text-left, &_text-right {
+          padding: $spacing-medium;
+        }
+        &_text-right {
+          padding: $spacing-large*2 $spacing-large*7;
+          font-family: 'Poppins', sans-serif;
+          font-size: px-to-rem(18px);
+          line-height: 24px;
+          letter-spacing: 2px;
+          font-weight: 500;
+        }
+      }
+    }
+
+    &_form {
+      margin-top: $spacing-large;
+      display: block;
+
+      &_register {
+        display: block;
+      }
+      &_login {
+        display: block;
+      }
+      &_button {
+        color: $light-blue;
+        margin-top: $spacing-medium;
+      }
+    }
+  }
+}
+
+
+.nav {
+
+  &__toggle {
+    cursor: pointer;
+    width: $spacing-medium * 2;
+
+    @include respond-to(desktop, tablet) {
+      display: none;
+    }
+  }
+
+  &__list {
+
+    @include respond-to(desktop, tablet) {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(70px, 1fr)) [rl] 70px [re];
+      background-color: rgba(63, 191, 127, 0.5);
+      padding: $spacing $spacing-medium;
+      color: $white-dark;
+      font-size: px-to-rem(20px);
+      font-family: 'Poppins', sans-serif;
+
+      & li:hover {
+        color: $black;
+      }
+
+      & li:focus {
+        outline: none;
+      }
+      
+      & li:last-child {
+        grid-column: rl / re;
+      }
+    }
+
+    @include respond-to(mobile) {
+      $delay: .5s;
+      $menu-items: 4;
+
+      @keyframes drop {
+        from {
+          top: -15px;
+        }
+        70% {
+          top: 15px;
+          animation-timing-function: ease-in;
+        }
+        to {
+          top: 0px;
+          opacity: 1;
+          animation-timing-function: ease-out;
+        }
+      }
+
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+
+      &_item {
+        position: relative;
+        opacity: 0;
+      }
+
+      &--active {
+        background-color: rgba(63, 191, 127, 0.5);
+        padding: $spacing $spacing-medium;
+        margin: $spacing;
+        font-size: px-to-rem(20px);
+        font-family: 'Poppins', sans-serif;
+        color: $white-dark;
+        border: 1px solid $green-dark;
+        border-radius: $radius;
+
+        & li {
+          @for $i from 2 through $menu-items {
+            &:nth-child(#{$i}) {
+              animation-delay: $delay * ($i - 1);
+            }
+          }
+          animation: drop 0.9s;
+          animation-fill-mode: forwards;
+        }
+
+      }
+
+    }
+  }
+}

@@ -1,0 +1,471 @@
+{
+	"info": {
+		"_postman_id": "1812f608-f022-4bd4-87ce-ef16e52e6e4d",
+		"name": "Notebook",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get note",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "https://localhost:5001/api/notes/5bbe520e9338ce03ac8ebcab",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"notes",
+						"5bbe520e9338ce03ac8ebcab"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post note",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJuaWVsc2NoODcyQG91dGxvb2suZGsiLCJqdGkiOiIwM2EzMDc3NC1jYjBhLTRjNGEtYjljZi05NmE0NWNiM2I3N2EiLCJpYXQiOjE1Mzk1NDg1MDEsImlkIjoiNWJjMzU3ZGNiOGU4YjIzOGNmOWUxNzYxIiwicm9sIjoibWVtYmVyIiwibmJmIjoxNTM5NTQ4NTAxLCJleHAiOjE1Mzk1NTU3MDEsImlzcyI6Ik5vdGVBcHAiLCJhdWQiOiJodHRwczovL2xvY2FsaG9zdDo1MDAxLyJ9.QNNH5QMMsCPg_zNsbN_BsxXW7a701LmTMCIbFYnRxAU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\": \"second\",\n\t\"text\": \"Hello World!\",\n\t\"userId\": \"5bc357dcb8e8b238cf9e1761\",\n\t\"categoryId\": \"5bc116a6013c5f09f8c798f2\"\n}"
+				},
+				"url": {
+					"raw": "https://localhost:5001/api/note",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"note"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "put note",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJuaWVsc2NoODdAb3V0bG9vay5kayIsImp0aSI6ImUzZDhlMDdlLWI3MmUtNGNlNy04YmM5LWU1ZGE0M2E3YjY2ZCIsImlhdCI6MTUzOTU1MTE2OCwiaWQiOiI1YmJlNTIwZTkzMzhjZTAzYWM4ZWJjYWIiLCJyb2wiOlsiYWRtaW4iLCJtZW1iZXIiXSwibmJmIjoxNTM5NTUxMTY4LCJleHAiOjE1Mzk1NTgzNjgsImlzcyI6Ik5vdGVBcHAiLCJhdWQiOiJodHRwczovL2xvY2FsaG9zdDo1MDAxLyJ9.BKY7AsRiHprsq8uVgXDs804BG06wwNeOvblU-_qC-MI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\": \"third\",\n\t\"text\": \"Hello World!-edited2\",\n\t\"categoryId\": \"5bc11717013c5f09f8c798f4\"\n}"
+				},
+				"url": {
+					"raw": "https://localhost:5001/api/note/update/5bc357fbb8e8b238cf9e1767",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"note",
+						"update",
+						"5bc357fbb8e8b238cf9e1767"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteAll notes",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJuaWVsc2NoODcyQG91dGxvb2suZGsiLCJqdGkiOiIyMGYyMTFjYS00NDYwLTQ0ZTUtOThkMy0xNDFmNDY5ZDkwYTciLCJpYXQiOjE1Mzk1Mjg5MDUsImlkIjoiNWJjMzU3ZGNiOGU4YjIzOGNmOWUxNzYxIiwicm9sIjoibWVtYmVyIiwibmJmIjoxNTM5NTI4OTA1LCJleHAiOjE1Mzk1MzYxMDUsImlzcyI6Ik5vdGVBcHAiLCJhdWQiOiJodHRwczovL2xvY2FsaG9zdDo1MDAxLyJ9.xHciIJ6FNatCrhwQMKBtXK7Ok9LKvLKIF2eQK8v7uEM",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://localhost:5001/api/note/deleteAll",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"note",
+						"deleteAll"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete note",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJuaWVsc2NoODdAb3V0bG9vay5kayIsImp0aSI6ImQ5Mjc0MGI5LTg2MDYtNGMwZi05Mzg4LTJiYjBlMzcyNjRmNiIsImlhdCI6MTUzOTU0OTY2OCwiaWQiOiI1YmJlNTIwZTkzMzhjZTAzYWM4ZWJjYWIiLCJyb2wiOlsiYWRtaW4iLCJtZW1iZXIiXSwibmJmIjoxNTM5NTQ5NjY3LCJleHAiOjE1Mzk1NTY4NjcsImlzcyI6Ik5vdGVBcHAiLCJhdWQiOiJodHRwczovL2xvY2FsaG9zdDo1MDAxLyJ9.W3L33fNYoqRqYNcIXNm86PHmv9lPBV9GoTGRSbfCvPY",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://localhost:5001/api/note/5bc357fdb8e8b238cf9e1769",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"note",
+						"5bc357fdb8e8b238cf9e1769"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getOne note",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "https://192.168.1.172:5001/api/note/fifth",
+					"protocol": "https",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"172"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"note",
+						"fifth"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post user",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\": \"nielsch87@outlook.dk\",\n\t\"password\": \"arm47nal\",\n\t\"firstName\": \"Niels\"\n}"
+				},
+				"url": {
+					"raw": "https://localhost:5001/api/user",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post role",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"admin\"\n}"
+				},
+				"url": {
+					"raw": "https://localhost:5001/api/role",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"role"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post roleUser",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"role\": \"admin\",\n  \"user\": \"nielsch87@outlook.dk\"\n}"
+				},
+				"url": {
+					"raw": "https://localhost:5001/api/addrole",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"addrole"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"username\": \"nielsch87@outlook.dk\",\n  \"password\": \"arm47nal\"\n}"
+				},
+				"url": {
+					"raw": "https://localhost:5001/api/login",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post confirm",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"id\": \"5bbbd539af39dd2b60b3cb98\",\n  \"token\": \"CfDJ8Drp8dKpl+dEnsPvAq2TXDCPw+OjHyQvRYe/U0MlgOvFq5CWr8bsyQEp7i+dPstlM+ZbwfRzdMHRhhWVLpQg7kalM+KckBbXZjGK88zfaD+d9SYc5fPRwlc1bclf2jQMgi8t3Zg6zRt+Zn8fZtJcUYOZnKlr+S/1hEQfEb2d0RWnMwt4yhUTQ3VM3qPeh+W+3lmKVosJIe7YzcN+4tsu1rwaLmnqc+MWN47jPcFLOHbO\"\n}"
+				},
+				"url": {
+					"raw": "https://localhost:5001/api/confirm",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"confirm"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get user",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://localhost:5001/api/user/5bbe520e9338ce03ac8ebcab",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"user",
+						"5bbe520e9338ce03ac8ebcab"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get roles",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://localhost:5001/api/roles",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"roles"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post category",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJuaWVsc2NoODdAb3V0bG9vay5kayIsImp0aSI6IjAzZGIxYzQ3LWUyYzItNDM3Mi1iNjQ2LWE2OTg3MjBjNmIzNiIsImlhdCI6MTUzOTM4MDg3OSwiaWQiOiI1YmJlNTIwZTkzMzhjZTAzYWM4ZWJjYWIiLCJyb2wiOlsiYWRtaW4iLCJtZW1iZXIiXSwibmJmIjoxNTM5MzgwODc4LCJleHAiOjE1MzkzODgwNzgsImlzcyI6Ik5vdGVBcHAiLCJhdWQiOiJodHRwczovL2xvY2FsaG9zdDo1MDAxLyJ9.zrnGkXIcEZfdLO55eXmKbPAZbywwvrnwxy-HYYo2sWE",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Learning\"\n}"
+				},
+				"url": {
+					"raw": "https://localhost:5001/api/category/add",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"category",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get allCategories",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJuaWVsc2NoODdAb3V0bG9vay5kayIsImp0aSI6IjAzZGIxYzQ3LWUyYzItNDM3Mi1iNjQ2LWE2OTg3MjBjNmIzNiIsImlhdCI6MTUzOTM4MDg3OSwiaWQiOiI1YmJlNTIwZTkzMzhjZTAzYWM4ZWJjYWIiLCJyb2wiOlsiYWRtaW4iLCJtZW1iZXIiXSwibmJmIjoxNTM5MzgwODc4LCJleHAiOjE1MzkzODgwNzgsImlzcyI6Ik5vdGVBcHAiLCJhdWQiOiJodHRwczovL2xvY2FsaG9zdDo1MDAxLyJ9.zrnGkXIcEZfdLO55eXmKbPAZbywwvrnwxy-HYYo2sWE",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://localhost:5001/api/category/all",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"category",
+						"all"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,4 @@
+@function px-to-rem($size) {
+  $remSize: $size / 14px;
+  @return #{$remSize}rem;
+}

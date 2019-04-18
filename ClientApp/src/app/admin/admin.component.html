@@ -1,0 +1,21 @@
+<div class="admin">
+  <div class="admin__users">
+    <div class="admin__users_list" *ngFor="let user of users">
+      <div class="admin__users_user">
+        <h1>{{ user.email }}</h1>
+        <div class="admin__users_user_roles" *ngFor="let role of user.roles">
+          <h4>{{ role }}</h4>
+        </div>
+        <h4>{{ user.emailConfirmed }}</h4>
+        <h4>{{ user.id }}</h4>
+        <button class="button" (click)="getUserDetails(user.id)">Get Details</button>
+      </div>
+    </div>
+  </div>
+  <div class="admin__roles">
+    <div class="admin__roles_list" *ngFor="let role of roles">
+      <h4>{{ role.name }}</h4>
+    </div>
+  </div>
+  <div class="admin__edits">{{ user | json }}</div>
+</div>

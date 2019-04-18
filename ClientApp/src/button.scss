@@ -1,0 +1,14 @@
+.button {
+  background-color: $black;
+  color: $white;
+  min-width: 200px;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: px-to-rem(13px);
+  font-weight: bold;
+  line-height: 50px;
+
+  &--disable {
+    background-color: $grey-dark;
+  }
+}

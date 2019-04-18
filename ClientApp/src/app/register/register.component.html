@@ -1,0 +1,26 @@
+<div class="register">
+  <form [formGroup]="form" (ngSubmit)="register()" class="form">
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input formControlName="email" type="text" id="email" class="form-control">
+    </div>
+      <div *ngIf="email.touched && email.invalid" class="alert alert-danger">Email is required.</div>
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input formControlName="password" type="password" id="password" class="form-control">
+    </div>
+      <div *ngIf="password.touched && password.invalid" class="alert alert-danger">
+        <div *ngIf="password.errors.required">Password is required.</div>
+        <div *ngIf="password.errors.minlength">Password min length is 8 charecters.</div>  
+      </div>
+    <div class="form-group">
+      <label for="confirmPassword">Retype Password</label>
+      <input formControlName="confirmPassword" type="password" id="confirmPassword" class="form-control">
+    </div>
+      <div *ngIf="form.get('confirmPassword').touched && form.get('confirmPassword').errors?.MatchPassword" class="alert alert-danger">Password do not match.</div>
+    <button [disabled]="!form.valid" type="submit" class="button form-button" [ngClass]="{'button--disable': !form.valid}">Sign Up</button>
+    <div *ngIf="errors" class="alert alert-danger" role="alert">
+      <strong>Oops!</strong> {{errors}}
+    </div>
+  </form>
+</div>

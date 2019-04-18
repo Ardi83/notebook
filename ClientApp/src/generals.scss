@@ -1,0 +1,64 @@
+input {
+  border: 1px solid $grey-dark;
+  padding: $spacing;
+}
+
+label {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  margin-right: $spacing;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  cursor: pointer;
+}
+
+.alert {
+  font-family: 'Poppins', sans-serif;
+  font-style: italic;
+  margin: $spacing/2 0;
+  border: 1px solid $black;
+  border-radius: 4px;
+  padding: $spacing;
+
+  &-danger {
+    border-color: $red;
+    color: $red;
+  }
+  &-success {
+    color: $green;
+  }
+}
+
+.form {
+  text-align: center;
+
+  &-group {
+    margin: $spacing/2 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &-control {
+
+    &--invalid {
+      border-color: red;
+    }
+  }
+
+  &-button {
+    margin-top: $spacing;
+  }
+
+}
+

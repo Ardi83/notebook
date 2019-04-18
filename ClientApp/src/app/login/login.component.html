@@ -1,0 +1,20 @@
+<div class="login">
+  <form [formGroup]="form" (ngSubmit)="login()" class="form" *ngIf="!authenticated">
+    <div class="form-group">
+      <label for="loginUsername">Username</label>
+      <input formControlName="username" type="text" id="loginUsername" class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="loginPassword">Password</label>
+      <input formControlName="password" type="password" id="loginPassword" class="form-control">
+    </div>
+    <button type="submit" class="button form-button">Login</button>
+    <div *ngIf="errors" class="alert alert-danger" role="alert">
+      <strong>Oops!</strong> {{errors}}
+    </div>
+  </form>
+  <div class="alert alert-success" *ngIf="authenticated">
+    <h3>You already logged in.</h3>
+    <div *ngIf="userService.isAdmin()">{{ userService.getUserRoles() }}</div>
+  </div>
+</div>

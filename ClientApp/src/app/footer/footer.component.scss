@@ -1,0 +1,10 @@
+@import '../../styles.scss';
+
+.footer {
+  
+  &__devider {
+    @include container-divider;
+    display: flex;
+    justify-content: center;
+  }
+}
